@@ -12,12 +12,12 @@ Electromagnetic shielding
 Radar Cross Section (RCS) control
 Electronic warfare systems
 
-Project Domain
+Project Domain:
 This work lies at the intersection of several engineering disciplines:
 Metamaterials and Periodic Electromagnetic Structures
 Frequency Selective Surfaces are two-dimensional periodic structures that interact with electromagnetic waves in a controlled manner. Each unit cell acts as a resonant element that determines the overall spectral response of the surface.
 
-RF and Microwave Engineering
+RF and Microwave Engineering:
 The project studies the interaction between electromagnetic waves and sub-wavelength resonant structures. The polygonal loop structure used in this design behaves as an LC resonator, where:
 
 Metallic loop → inductance (L)
@@ -26,8 +26,7 @@ This LC resonance determines the frequency where transmission occurs.
 Radar Cross Section (RCS) Control
 FSS structures can be used to manipulate reflected and transmitted electromagnetic waves. By allowing only specific radar frequencies to pass through a surface, they help in signature management and stealth technologies.
 
-High Frequency Substrate Engineering
-The design uses Rogers RO3203, a high-frequency laminate known for:
+High Frequency Substrate Engineering The design uses Rogers RO3203, a high-frequency laminate known for:
 Low dielectric loss
 High thermal stability
 Good power handling capability
@@ -51,8 +50,9 @@ Design a compact 10 mm × 10 mm unit cell to ensure sub-wavelength operation and
 5. High Transmission Efficiency
 Aim for near-zero insertion loss at resonance, resulting in almost 0 dB transmission at the desired frequency.
 
-FSS Unit Cell Design
+FSS Unit Cell Design: 
 The proposed structure consists of a polygonal metallic loop with slot cuts etched on a dielectric substrate.
+
 Key design features include:
 Polygonal loop resonator
 Slot-based capacitive tuning
@@ -69,25 +69,21 @@ A deep S11 null indicates strong resonance and good impedance matching.
 Key observations:
 Resonant dip occurs near the target frequency.
 Indicates strong coupling between the electromagnetic wave and the resonant structure.
-Transmission Coefficient (S21)
-S21 indicates the transmission performance of the FSS.
+Transmission Coefficient (S21) S21 indicates the transmission performance of the FSS.
 
 Key characteristics:
 Maximum transmission occurs at the resonant frequency.
 Transmission approaches 0 dB, indicating minimal signal loss.
-Machine Learning Based Optimization
-Traditional FSS design requires large numbers of electromagnetic simulations, which can be computationally expensive.
+Machine Learning Based Optimization traditional FSS design requires large numbers of electromagnetic simulations, which can be computationally expensive.
 To address this issue, a machine learning model was implemented to predict optimal geometric parameters.
 
 ML Workflow
-Generate simulation dataset
-Extract geometric parameters
-Train machine learning regression model
-Predict optimized parameters
-Compare ML prediction with EM simulation
+Generate simulation dataset -> Extract geometric parameters -> Train machine learning regression model -> Predict optimized parameters -> Compare ML prediction with EM simulation
+
 The machine learning model learns the relationship between:
 Geometric parameters of the unit cell
 Resulting electromagnetic response
+
 This enables rapid prediction of optimal FSS designs without extensive simulations.
 
 Model Performance
@@ -96,6 +92,7 @@ The ML model predicts the resonant response of the FSS structure with a very sma
 Key result:
 Prediction error ≈ 0.5%
 This demonstrates that machine learning can effectively approximate electromagnetic simulations for FSS design optimization.
+
 Design Simplification for ML Implementation
 The original FSS structure contained many geometric parameters, making it difficult to train an efficient ML model.
 Due to computational limitations, the structure was simplified by:
